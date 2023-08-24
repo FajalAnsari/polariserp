@@ -1,0 +1,12 @@
+:root{
+    --primary-blue:#f3f7fa;
+    --secondry-blue: #0070AF;
+    --bg-white:#ffffff;
+    --second-primary-blue: background-image: linear-gradient(180deg, #F3F7FA 40%, #E1F0FE00 89%);
+    --underline-pink:#f3cdbd;
+    --underline-yellow:#f9d415;
+    --underline-primary-green:#9ae8a5;
+    --underline-secondry-green:#c9ffc8;
+    --underline-blue-primary:#80DEE9;
+    --underline-blue-secondry:#0070af;
+}
