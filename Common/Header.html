@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+<style>
+  /* body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  } */
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    text-align: center; /* Center the brand */
+    flex-grow: 1; /* Occupy available space */
+  }
+
+  .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 20px; /* Add margin to separate from brand */
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -300px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+
+  .close-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+      margin-right: 0; /* Reset margin */
+      margin-left: 20px; /* Add margin to the left for spacing */
+    }
+
+    .close-icon {
+      display: block;
+      margin-right: 20px; /* Add margin to the right for spacing */
+    }
+
+    .navbar-links {
+      display: none;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="menu-icon">&#9776;</div>
+    <div class="navbar-brand">Responsive Navbar</div>
+    <div class="navbar-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="sidebar">
+    <div class="close-icon" onclick="closeSidebar();">&times;</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <script>
+    const menuIcon = document.querySelector('.menu-icon');
+    const closeIcon = document.querySelector('.close-icon');
+    const sidebar = document.querySelector('.sidebar');
+
+    menuIcon.addEventListener('click', () => {
+      sidebar.classList.add('active');
+    });
+
+    closeIcon.addEventListener('click', () => {
+      sidebar.classList.remove('active');
+    });
+
+    function closeSidebar() {
+      sidebar.classList.remove('active');
+    }
+  </script>
+</body>
+</html>
