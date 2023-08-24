@@ -10,9 +10,8 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px;
-    margin-top: auto !important; 
     position: fixed;
-    /* left: 0; */
+
     bottom: 0;
   }
   .footer .footer-columns a{
