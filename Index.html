@@ -4,8 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polaris ERP</title>
+
+    <!-- jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- Including Footer & header -->
+    <link rel="stylesheet" href="Style.css">
+
+    <script>
+        jQuery(document).ready(function () {
+          jQuery("#navbar").load("./Common/Navbar.html");
+          jQuery("#footer").load("./Common/Footer.html");
+        });
+      </script>
+    <!-- Including Footer & header  -->
 </head>
 <body>
-    Welcome To Polaris ERP
+    <!-- navbar starts here  -->
+    <nav id="navbar">
+    
+    </nav>
+    <!-- navbar ends here  -->
+
+    <!-- Footer start here  -->
+    <nav id="footer"></nav>
+    <!-- Footer ends here  -->
 </body>
 </html> 
