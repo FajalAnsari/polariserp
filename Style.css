@@ -17,12 +17,93 @@
     --underline-secondry-green:#c9ffc8;
     --underline-blue-primary:#80DEE9;
     --underline-blue-secondry:#0070af;
+    --primary-black:#141F39;
 }
 /* Boiler End  */
 
 
 /* Nabar starts here  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
 
+.navbar-brand {
+  font-size: 1.5rem;
+  text-align: center; /* Center the brand */
+  flex-grow: 1; /* Occupy available space */
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 20px; /* Add margin to separate from brand */
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  left: -300px;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.close-icon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  text-align: right;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    margin-right: 0; /* Reset margin */
+    margin-left: 20px; /* Add margin to the left for spacing */
+  }
+
+  .close-icon {
+    display: block;
+    margin-right: 20px; /* Add margin to the right for spacing */
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+}
 
 /* Navbar ends here  */
 
